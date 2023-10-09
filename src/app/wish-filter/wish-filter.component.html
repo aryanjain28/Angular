@@ -1,8 +1,8 @@
 <div class="col-sm-2">
   <select
     class="form-select"
-    [(ngModel)]="filterBy"
-    (ngModelChange)="changeFilter($event)"
+    [(ngModel)]="filter"
+    (ngModelChange)="updateFilter($event)"
   >
     <option value="0">All</option>
     <option value="1">Unfullfilled</option>
