@@ -1,0 +1,28 @@
+<form
+  class="row gap-5 m-5"
+  [formGroup]="contactForm"
+  (ngSubmit)="$event.preventDefault(); submitForm()"
+>
+  <div>
+    <h6 class="h6">Name</h6>
+    <input class="form-control" formControlName="senderName" />
+  </div>
+
+  <div>
+    <h6 class="h6">Email</h6>
+    <input class="form-control" formControlName="senderEmail" />
+  </div>
+
+  <div>
+    <h6 class="h6">Message</h6>
+    <textarea class="form-control" formControlName="senderMessage"></textarea>
+  </div>
+
+  <button
+    type="submit"
+    class="btn btn-outline-primary"
+    [disabled]="contactForm.valid"
+  >
+    Submit
+  </button>
+</form>
